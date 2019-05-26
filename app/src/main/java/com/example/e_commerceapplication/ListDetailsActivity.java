@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class ListDetailsActivity extends AppCompatActivity {
     private static final String TAG = "ListDetailsActivity";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +48,7 @@ public class ListDetailsActivity extends AppCompatActivity {
         //Discount price of game
         TextView discountPrice = findViewById(R.id.discountPrice_text_view);
         String discount = getIntent().getStringExtra("discount");
-        if(discount != null) {
+        if (discount != null) {
             discountPrice.setText("Discount Price: " + discount);
         } else {
             discountPrice.setText("Discount Price: " + "0$");
@@ -62,6 +63,5 @@ public class ListDetailsActivity extends AppCompatActivity {
         TextView noOfSales = findViewById(R.id.platformSales_text_view);
         String sales = getIntent().getStringExtra("sales");
         noOfSales.setText("Number Of Sales: " + sales);
-
     }
 }

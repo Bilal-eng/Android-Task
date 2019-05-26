@@ -26,8 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         passWord = findViewById(R.id.input_password);
 
         users = new ArrayList<>();
-        users.add(new User("b", "1"));
-
+        users.add(new User("bilal", "12345"));
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

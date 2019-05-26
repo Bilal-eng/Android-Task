@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:textSize="16sp"
                 tools:text="Name" />
 
             <TextView
@@ -37,6 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:textSize="16sp"
                 tools:text="Release Name" />
 
             <TextView
@@ -44,6 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:textSize="16sp"
                 tools:text="Developer Name" />
 
             <TextView
@@ -51,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:textSize="16sp"
                 tools:text="Price" />
 
             <TextView
@@ -58,7 +62,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                tools:text="Discount Price" />
+                tools:text="Discount Price"
+                android:textSize="16sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,6 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
                     tools:text="Platform Name" />
 
                 <TextView
@@ -78,6 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
                     tools:text="Platform Number Of Sales" />
 
             </LinearLayout>
