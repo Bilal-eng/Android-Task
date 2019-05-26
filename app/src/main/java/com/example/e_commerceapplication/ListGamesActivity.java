@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -52,12 +53,11 @@ public class ListGamesActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<ListGames>> call, Response<ArrayList<ListGames>> response) {
 //                Toast.makeText(ListGamesActivity.this, response.body().get(4).getmPlatforms().get(2).getNumberOfSales() + "", Toast.LENGTH_SHORT).show();
-                generateGameList(response.body());
+                    generateGameList(response.body());
             }
 
             @Override
             public void onFailure(Call<ArrayList<ListGames>> call, Throwable t) {
-
             }
         });
     }
