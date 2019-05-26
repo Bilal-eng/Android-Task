@@ -52,12 +52,12 @@ public class ListGamesActivity extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<ListGames>>() {
             @Override
             public void onResponse(Call<ArrayList<ListGames>> call, Response<ArrayList<ListGames>> response) {
-//                Toast.makeText(ListGamesActivity.this, response.body().get(4).getmPlatforms().get(2).getNumberOfSales() + "", Toast.LENGTH_SHORT).show();
                     generateGameList(response.body());
             }
 
             @Override
             public void onFailure(Call<ArrayList<ListGames>> call, Throwable t) {
+                Toast.makeText(ListGamesActivity.this, R.string.no_internet_connection, Toast.LENGTH_SHORT).show();
             }
         });
     }
