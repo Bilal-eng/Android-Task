@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -21,8 +20,6 @@ public class ListGamesAdapter extends RecyclerView.Adapter<ListGamesAdapter.MyVi
 
     private LayoutInflater inflater;
     private ArrayList<ListGames> dataModelArrayList;
-    ArrayList<String> PlatformName;
-    ArrayList<String> NumbersOfSales;
     private Context context;
 
 
