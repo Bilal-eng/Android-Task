@@ -1,16 +1,12 @@
 package com.example.e_commerceapplication;
 
-import android.content.ReceiverCallNotAllowedException;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -24,6 +20,7 @@ public class ListGamesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ListGamesAdapter listGamesAdapter;
+    RelativeLayout emptyView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +28,7 @@ public class ListGamesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         recyclerView = findViewById(R.id.recycleViewList);
+        emptyView = findViewById(R.id.empty_view);
 
         loadListGames();
     }
@@ -52,12 +50,12 @@ public class ListGamesActivity extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<ListGames>>() {
             @Override
             public void onResponse(Call<ArrayList<ListGames>> call, Response<ArrayList<ListGames>> response) {
-                    generateGameList(response.body());
+                generateGameList(response.body());
             }
 
             @Override
             public void onFailure(Call<ArrayList<ListGames>> call, Throwable t) {
-                Toast.makeText(ListGamesActivity.this, R.string.no_internet_connection, Toast.LENGTH_SHORT).show();
+                emptyView.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -69,7 +67,4 @@ public class ListGamesActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(listGamesAdapter);
     }
-
-
 }
-

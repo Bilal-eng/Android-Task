@@ -7,6 +7,34 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycleViewList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty_view"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/nointernet"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_internet_connection"
+            android:gravity="center"
+            android:paddingTop="64dp"
+            android:textColor="@color/custom_color"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

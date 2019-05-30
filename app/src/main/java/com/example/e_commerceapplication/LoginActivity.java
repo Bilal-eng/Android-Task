@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, ListGamesActivity.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(LoginActivity.this, "Please enter username bilal and password 123456 to login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please enter username bilal and password 12345 to login", Toast.LENGTH_SHORT).show();
                 }
             }
         });

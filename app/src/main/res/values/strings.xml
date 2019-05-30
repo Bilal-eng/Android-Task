@@ -4,5 +4,5 @@
     <string name="password" translatable="false">Password</string>
     <string name="login" translatable="false">Login</string>
     <string name="noaccount" translatable="false">No account yet? Create one</string>
-    <string name="no_internet_connection" translatable="false">No internet connection !</string>
+    <string name="no_internet_connection" translatable="false">No Internet Connection !</string>
 </resources>
